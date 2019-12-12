@@ -17,6 +17,7 @@ public class BtnScript : MonoBehaviour, ISelectHandler, IDeselectHandler
             text.fontStyle = FontStyle.Bold;
         }
         ParticleSystem particule = btn.GetComponentInChildren<ParticleSystem>(true);
+        particule.Play();
     }
 
     public void OnDeselect(BaseEventData eventData)

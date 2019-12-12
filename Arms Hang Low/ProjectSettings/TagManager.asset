@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - credit
+  - play
+  - level
+  - quit
+  - world1
+  - world2
+  - back
+  - lvl1
+  - lvl2
+  - lvl3
+  - lvl4
+  - lvl5
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,5 @@ public class BtnBack : MonoBehaviour
             Debug.Log("heeeere");
             SceneManager.LoadScene("MainMenu");
         }
-      
     }
 }
