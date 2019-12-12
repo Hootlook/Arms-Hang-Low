@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Range(0.01f, 2f)]
+    public float force;
     public Transform rightHand;
     public Transform leftHand;
     Collider2D[] rightColliders;
     Collider2D[] leftColliders;
     Rigidbody2D righHandRB;
     Rigidbody2D leftHandRB;
-    Rigidbody2D playerRB;
     bool isLeftGrabbing;
     bool isRightGrabbing;
     ContactFilter2D filter;
@@ -22,14 +23,12 @@ public class Player : MonoBehaviour
     {
         righHandRB = rightHand.parent.GetComponent<Rigidbody2D>();
         leftHandRB = leftHand.parent.GetComponent<Rigidbody2D>();
-
-        playerRB = transform.GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        righHandRB.AddForceAtPosition(new Vector2(Input.GetAxis("Joystick X"), Input.GetAxis("Joystick Y")), rightHand.position, ForceMode2D.Impulse);
-        leftHandRB.AddForceAtPosition(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")), leftHand.position, ForceMode2D.Impulse);
+        righHandRB.AddForceAtPosition(new Vector2(Input.GetAxis("Joystick X"), Input.GetAxis("Joystick Y")) * force, rightHand.position, ForceMode2D.Impulse);
+        leftHandRB.AddForceAtPosition(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * force, leftHand.position, ForceMode2D.Impulse);
 
         Grabbing("LeftTrigger", ref leftHand, ref leftColliders, ref leftGrabPosition, ref leftHandRB, ref isLeftGrabbing);
         Grabbing("RightTrigger", ref  rightHand, ref rightColliders, ref rightGrabPosition, ref righHandRB, ref isRightGrabbing);
