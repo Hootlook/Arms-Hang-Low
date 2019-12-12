@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - credit
+  - play
+  - level
+  - quit
+  - world1
+  - world2
+  - back
+  - lvl1
+  - lvl2
+  - lvl3
+  - lvl4
+  - lvl5
   layers:
   - Default
   - TransparentFX
@@ -40,4 +52,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3058622369
     locked: 0
