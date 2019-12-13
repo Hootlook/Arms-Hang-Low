@@ -32,6 +32,12 @@ public class Player : MonoBehaviour
 
         Grabbing("LeftTrigger", ref leftHand, ref leftColliders, ref leftGrabPosition, ref leftHandRB, ref isLeftGrabbing);
         Grabbing("RightTrigger", ref  rightHand, ref rightColliders, ref rightGrabPosition, ref righHandRB, ref isRightGrabbing);
+
+        if (transform.position.y <= -50)
+        {
+            GameManager.instance.EndLevel(false);
+            Destroy(gameObject);
+        }
     }
 
     private void Grabbing(string triggerInput, ref Transform hand, ref Collider2D[] colliders, ref Vector2 grabPosition, ref Rigidbody2D handRB, ref bool isGrabbing)
