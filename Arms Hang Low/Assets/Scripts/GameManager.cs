@@ -44,15 +44,16 @@ public class GameManager : MonoBehaviour
             {
                 menu.SetActive(!menu.activeSelf);
             }
-        }
 
-        if (menuPrevState == !menu.activeSelf)
-        {
-            eventSystem.SetSelectedGameObject(menuContainer.transform.GetChild(0).gameObject);
+            if (menuPrevState == !menu.activeSelf)
+            {
+                eventSystem.SetSelectedGameObject(GetFirstActive(menuContainer));
+            }
         }
 
         menuPrevState = menu.activeSelf;
     }
+
     public void LoadNextLevel(bool restart)
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + (restart ? 0 : 1));
@@ -81,11 +82,23 @@ public class GameManager : MonoBehaviour
         {
             win = true;
         }
-
         menuLabel.text = win ? "Bravo !": "Aww to bad :(";
         menuResume.SetActive(false);
         menuContinue.SetActive(win);
         menu.SetActive(true);
+        eventSystem.SetSelectedGameObject(GetFirstActive(menuContainer));
+    }
+
+    GameObject GetFirstActive(GameObject objectRoot)
+    {
+        for (int i = 0; i < objectRoot.transform.childCount; i++)
+        {
+            if (objectRoot.transform.GetChild(i).gameObject.activeSelf == true)
+            {
+                return objectRoot.transform.GetChild(i).gameObject;
+            }
+        }
+        return null;
     }
     private void OnLevelWasLoaded(int level)
     {
