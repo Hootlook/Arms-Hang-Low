@@ -177,9 +177,9 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 76b915815b84840439c4bd49f86a2cd9, type: 3}
-    m_FontSize: 28
+    m_FontSize: 38
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
@@ -366,8 +366,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -336}
-  m_SizeDelta: {x: 250, y: 70}
+  m_AnchoredPosition: {x: 10.3, y: -313.7}
+  m_SizeDelta: {x: 404.7, y: 111.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &333584659
 GameObject:
@@ -655,11 +655,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 76b915815b84840439c4bd49f86a2cd9, type: 3}
-    m_FontSize: 28
+    m_FontSize: 38
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 2
-    m_MaxSize: 40
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 48
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -884,8 +884,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.45438808, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 304.4, y: -155}
-  m_SizeDelta: {x: 146.7, y: 92.8}
+  m_AnchoredPosition: {x: 318.06, y: -152}
+  m_SizeDelta: {x: 246.4, y: 192.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1576624521
 MonoBehaviour:
@@ -1122,8 +1122,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.45438808, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -259.475, y: -155}
-  m_SizeDelta: {x: 138.95001, y: 90}
+  m_AnchoredPosition: {x: -249.39, y: -151.3}
+  m_SizeDelta: {x: 267.9, y: 191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759167604
 MonoBehaviour:
@@ -1148,7 +1148,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 0.972549}
+    m_SelectedColor: {r: 0.09433961, g: 0.0129049495, b: 0.0129049495, a: 0.972549}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

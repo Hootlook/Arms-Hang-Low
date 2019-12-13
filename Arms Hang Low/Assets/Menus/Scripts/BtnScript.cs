@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -48,7 +49,7 @@ public class BtnScript : MonoBehaviour, ISelectHandler, IDeselectHandler
                 SceneManager.LoadScene("Credit");
                 break;
             case "quit":
-                Application.Quit();
+                EditorApplication.isPlaying = false;
                 break;
         }
     }
